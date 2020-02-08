@@ -2,8 +2,6 @@ var $ = require('jquery');
 
 var countdownTime = new Date("00:20:00").getTime();
 
-console.log('conneted')
-
 var x = setInterval(function() {
     var time = countdownTime
 
