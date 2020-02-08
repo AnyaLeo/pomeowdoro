@@ -1,17 +1,53 @@
-var $ = require('jquery');
+function Incrementor (workFunc, interval, errorFunc) {
+    var that = this;
+    var expected, timeout;
+    this.interval = interval;
 
-var countdownTime = new Date("00:20:00").getTime();
+    this.start = function() {
+        expected = Date.now() + this.interval;
+        timeout = setTimeout(step, this.interval);
+    }
 
-console.log('conneted')
+    this.stop = function() {
+        clearTimeout(timeout);
+    }
 
-var x = setInterval(function() {
-    var time = countdownTime
+    function step() {
+        var drift = Date.now() - expected;
+        if (drift > that.interval) {
+            // You could have some default stuff here too...
+            if (errorFunc) errorFunc();
+        }
+        workFunc();
+        expected += that.interval;
+        timeout = setTimeout(step, Math.max(0, that.interval-drift));
+    }
+}
 
-    var hours = Math.floor((time % (1000 * 60 * 60 *24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((time % (1000 * 60)) / 1000);
+function Time (seconds, minutes, hours) {
+    this.second = seconds;
+    this.minutes = minutes;
+    this.hours = hours;
 
-    $('#countDown').html(function() {
-        hours + "h:" + minutes + "m:" + seconds + "s";
-    });
-}, 1000);
+    this.totalSeconds = function() {
+        var sec = seconds + minutes * 60 + hours * 60 * 60;
+        return sec;
+    }
+
+    this.countDownFinished = function(countDownSeconds) {
+        return (this.totalSeconds() === countDownSeconds);
+    }
+
+    this.getSecond = function() {
+        return this.second;
+    }
+
+    this.getMinutes = function() {
+        return this.minutes;
+    }
+
+    this.getHours = function() {
+        return this.hours;
+    }
+
+}
