@@ -1,4 +1,7 @@
 .draggable-area{
     -webkit-app-region: drag;
-    background-color:blue;
+}
+
+.jumbotron {
+    width: 250px;
 }
