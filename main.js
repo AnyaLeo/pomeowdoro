@@ -4,7 +4,7 @@ const { app, BrowserWindow, screen } = require('electron');
 require('electron-reload')(__dirname);
 
 // VARIABLES
-var appHeight = 200 + 30 + 50;
+var appHeight = 200 + 30 + 80;
 var appWidth =  180;
 
 function main() {

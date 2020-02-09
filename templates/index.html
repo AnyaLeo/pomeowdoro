@@ -8,6 +8,17 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <!-- Styles -->
     <link rel="stylesheet" href="../styles/main.css">
+    <script type="text/javascript" src="../scripts/main.js"></script>
+    <script>
+      function switchHackMode(checkboxElem) {
+        let cat = document.getElementById("cat");
+        if (checkboxElem.checked) {
+          cat.src = "../assets/hacker-cat-animated.gif";
+        } else {
+          cat.src = "../assets/rest-cat-animated.gif";
+        }
+}
+    </script>
   </head>
   <body>
     <div class="draggable-area"><img src="../assets/drag-icon.png" width=30 height=30></div>
@@ -15,7 +26,10 @@
     <div id="popupSetting">
     </div>
       <img id="cat" src="../assets/rest-cat-animated.gif" width=180 height=200 alt="cat">
-      <p id="timer">Timer:20:00</p>
+      <p id="timer">Timer:20:00
+        <br><input type="checkbox" name="hacker" value="hackMode" onchange="switchHackMode(this)">
+        <label for="hacker">Turn on hacker mode? (seizure warning)</label><br>
+      </p>
   </body>
   <script type="text/javascript" src="../scripts/setting.js"></script>
   <script type="text/javascript" src="../scripts/timer.js"></script>
