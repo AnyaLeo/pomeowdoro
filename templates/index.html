@@ -2,7 +2,6 @@
 <html>
   <head>
     <script type="text/javascript" src="../scripts/countdown.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-2kOE+STGAkgemIkUbGtoZ8dJLqfvJ/xzRnimSkQN7viOfwRvWseF7lqcuNXmjwrL" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Hello df!</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
@@ -11,11 +10,12 @@
     <link rel="stylesheet" href="../styles/main.css">
   </head>
   <body>
-      <p id="countDown"></p>
-      <div class="draggable-area">
-        <div class="cat">
-          <img src="../assets/rest-cat-animated.gif">
-        </div>
-      </div>
+    <div class="draggable-area"><img src="../assets/drag-icon.png" width=30 height=30></div>
+    <!--<p id="countDown"></p> -->
+    <div id="popupSetting">
+    </div>
+      <img id="cat" src="../assets/rest-cat-animated.gif" width=180 height=200>
   </body>
+  <script type="text/javascript" src="../scripts/setting.js"></script>
+    <!--<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-2kOE+STGAkgemIkUbGtoZ8dJLqfvJ/xzRnimSkQN7viOfwRvWseF7lqcuNXmjwrL" crossorigin="anonymous">-->
 </html>

@@ -1,4 +1,22 @@
 .draggable-area{
     -webkit-app-region: drag;
-    background-color:blue;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.jumbotron {
+    width: 250px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
