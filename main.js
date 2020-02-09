@@ -4,7 +4,7 @@ const { app, BrowserWindow, screen } = require('electron');
 require('electron-reload')(__dirname);
 
 // VARIABLES
-var appHeight = 200 + 30 + 80;
+var appHeight = 200 + 30 + 100;
 var appWidth =  180;
 
 function main() {
@@ -37,7 +37,7 @@ function createWindow () {
 
   // Open the DevTools.
   // If the devtools are open, the window will not be transparent
-  //win.webContents.openDevTools()
+  //win.webContents.openDevTools();
   document.getElementById("cat").style.width = "100px";
   document.getElementById("cat").style.height = "100px";
 

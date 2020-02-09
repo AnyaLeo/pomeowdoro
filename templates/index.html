@@ -21,15 +21,21 @@
     </script>
   </head>
   <body>
+
     <div class="draggable-area"><img src="../assets/drag-icon.png" width=30 height=30></div>
     <!--<p id="countDown"></p> -->
     <div id="popupSetting">
     </div>
       <img id="cat" src="../assets/rest-cat-animated.gif" width=180 height=200 alt="cat">
-      <p id="timer">Timer:20:00
-        <br><input type="checkbox" name="hacker" value="hackMode" onchange="switchHackMode(this)">
-        <label for="hacker">Turn on hacker mode? (seizure warning)</label><br>
-      </p>
+    <p id="timer">Timer: </p>
+    <p>
+      <br><input type="checkbox" name="hacker" value="hackMode" onchange="switchHackMode(this)">
+      <label for="hacker">Turn on hacker mode?</label><br>
+    </p>
+<!--    <form>-->
+<!--      <input type="time" id="setTime" min="00:01" max="01:00" required>-->
+<!--      <input type="submit" value="submit">-->
+<!--    </form>-->
   </body>
   <script type="text/javascript" src="../scripts/setting.js"></script>
   <script type="text/javascript" src="../scripts/timer.js"></script>

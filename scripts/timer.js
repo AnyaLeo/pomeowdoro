@@ -63,10 +63,16 @@ var doError = function() {
 
 // FUNCTIONS
 var doWork = function() {
-    document.getElementById('timer').textContent = "Timer: " + (timeSet - justSomeNumber);
-    console.log(++justSomeNumber);
+    if((timeSet - justSomeNumber) <= 0) {
+        ticker.stop();
+    } else {
+        console.log(++justSomeNumber);
+        document.getElementById('timer').textContent = "Timer: " + (timeSet - justSomeNumber);
+    }
+
 };
 
 var ticker = new Incrementor(doWork, 1000, doError);
 ticker.start();
+document.getElementById('timer').textContent = "Timer: " + (timeSet - justSomeNumber);
 
