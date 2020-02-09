@@ -2,6 +2,8 @@
     -webkit-app-region: drag;
     height: 30px;
     font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .jumbotron {
@@ -11,4 +13,10 @@
 p {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }

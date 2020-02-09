@@ -15,7 +15,7 @@ function main() {
 function createWindow () {
   // Find the x and y coordinates for the window
   let display = screen.getPrimaryDisplay();
-  let newWindowY = display.bounds.height - appHeight;
+  let newWindowY = 0; //display.bounds.height - appHeight;
   let newWindowX = display.bounds.width - appWidth;
 
   // Create the browser window.
